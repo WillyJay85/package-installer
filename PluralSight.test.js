@@ -1,6 +1,4 @@
 const PluralSight = require('./PluralSight')
-
-
 describe('PluralSight', () => {
     let nextTestUnlocked = false
 
@@ -11,7 +9,6 @@ describe('PluralSight', () => {
         }
         return false
     }
-    
     const unlockNextTest = () => {
         nextTestUnlocked = true
     }
@@ -20,7 +17,6 @@ describe('PluralSight', () => {
         expect(PluralSight.string).toBeDefined()
         expect(typeof PluralSight.number).toEqual('number')
         expect(PluralSight.string).toEqual("KittenService: CamelCaser")
-
         unlockNextTest()
     })
 
@@ -46,7 +42,6 @@ describe('PluralSight', () => {
             unlockNextTest()
         }
     })
-
     test('property "object" must exist and meet the requirements', () => {
         if (canRunThisTest()) {
             expect(basics.object).toBeDefined()
@@ -58,7 +53,6 @@ describe('PluralSight', () => {
             unlockNextTest()
         }
     })
-
     test('property "array" must exist and meet the requirements', () => {
         if (canRunThisTest()) {
             expect(basics.array).toBeDefined()
@@ -70,7 +64,6 @@ describe('PluralSight', () => {
             unlockNextTest()
         }
     })
-
     test('property "null" must exist and meet the requirements', () => {
         if (canRunThisTest()) {
             expect(basics.null).toBeDefined()
@@ -79,7 +72,6 @@ describe('PluralSight', () => {
             unlockNextTest()
         }
     })
-
     test('property "function" must exist and meet the requirements', () => {
         if (canRunThisTest()) {
             expect(basics.function).toBeDefined()
@@ -90,7 +82,6 @@ describe('PluralSight', () => {
             unlockNextTest()
         }
     })
-
     test.each([
         [1, 1, 2],
         [2, 2, 4],
@@ -102,7 +93,6 @@ describe('PluralSight', () => {
         (x, y, expected) => {
         if (canRunThisTest()) {
             expect(basics.function(x,y)).toEqual(expected)
-
             unlockNextTest()
         }
     })
